@@ -24,6 +24,11 @@ export const NavbarContainer = styled.div`
    top: 0;
    transition: ${p => p.theme.transition};
    z-index: 50;
+
+   @media ( max-width:${({ theme }) => theme.tablet}) {
+      padding: ${p => p.theme.space[1]}px;
+   }
+
 `
 
 export const NavbarLeft = styled.div`
@@ -59,6 +64,9 @@ export const Search = styled.div`
    border: 1px solid ${p => p.theme.colors.grey};
    border-radius: ${p => p.theme.borderRadius[1]}px;
    padding: ${p => p.theme.space[1]}px;
+   
+
+   
 `
 
 
@@ -104,6 +112,10 @@ cursor: pointer;
 width: 20px;
 height: 20px;
 color: ${p => p.theme.title};
+
+@media (max-width:${({ theme }) => theme.mobile}) {
+   display: none;
+}
 `
 export const SearchAltIcon = styled(SearchAlt)`
 cursor: pointer;
@@ -122,10 +134,17 @@ cursor: pointer;
 width: 20px;
 height: 20px;
 color: ${p => p.theme.title};
+
+   @media ( max-width:${({ theme }) => theme.mobile}) {
+      display: none;
+   }
 `
 export const BellOutlineIcon = styled(BellOutline)`
 cursor: pointer;
 width: 20px;
 height: 20px;
 color: ${p => p.theme.title};
+   @media ( max-width:${({ theme }) => theme.mobile}) {
+      display: none;
+   }
 `

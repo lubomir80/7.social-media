@@ -25,10 +25,8 @@ function Layout() {
 }
 
 const LayoutContainer = styled.div`
-   font-family: ${p => p.theme.fonts.body};
-   background-color: ${p => p.theme.body};
-   color: ${p => p.theme.title};
    transition: ${p => p.theme.transition};
+   background-color: ${p => p.theme.body};
 `
 
 

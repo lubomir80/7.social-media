@@ -8,7 +8,12 @@ export const GlobalStyles = createGlobalStyle`
       padding: 0;
       box-sizing: content-box;
     }
- 
+
+     body{
+      font-family: ${p => p.theme.fonts.body};
+      color: ${p => p.theme.title};
+     }
+    
     
  
 `

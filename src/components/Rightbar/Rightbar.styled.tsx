@@ -21,8 +21,8 @@ export const NavbarRight = styled.div`
 export const RightContainer = styled.div`
    overflow: scroll;
    display: flex;
-   padding: ${p => p.theme.space[2]}px;
-   padding-left: 0;
+   padding: ${p => p.theme.space[1]}px;
+ 
    background-color: ${p => p.theme.body}
    height: 100%;
    display: flex;
@@ -31,9 +31,9 @@ export const RightContainer = styled.div`
    transition: ${p => p.theme.tramsition};
 
    &::-webkit-scrollbar{
-   display: none;
+   display: none;   
+   }
 
-     
-}
+
 `
 

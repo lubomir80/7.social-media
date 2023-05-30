@@ -8,6 +8,7 @@ export const Btn = styled.button`
    padding: ${p => p.theme.space[1]}px;
    border-radius: ${({ theme }) => theme.borderRadius[1]}px;
    transition: ${({ theme }) => theme.transition};
+   margin: auto;
 `
 export const BtnBlue = styled(Btn)`
    background-color: ${({ theme }) => theme.colors.blue};

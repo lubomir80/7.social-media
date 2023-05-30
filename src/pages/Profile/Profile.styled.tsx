@@ -10,12 +10,15 @@ import { EmailOutline } from "@styled-icons/evaicons-outline/EmailOutline"
 import { MoreVerticalOutline } from "@styled-icons/evaicons-outline/MoreVerticalOutline"
 
 export const ProfileSection = styled.section`
-   position: relative;
-   height: 200vh;
+   position: relative;  
 `
 
 export const ProfileImagesBox = styled.div`
    margin-bottom: ${p => p.theme.space[2]}px;
+
+   @media ( max-width:${({ theme }) => theme.tablet}) {
+      margin-bottom: ${p => p.theme.space[1]}px;
+   }
 `
 
 export const BackgroundPic = styled.img`
@@ -33,10 +36,18 @@ export const ProfilePic = styled.img`
    width: 250px;
    height: 250px;
    object-fit: cover;
+   
+   @media ( max-width:${({ theme }) => theme.tabletBg}) {
+      scale: .8;
+   }
 `
 
 export const ProfileContainer = styled.div`
    padding: 0 ${p => p.theme.space[2]}px;
+
+   @media ( max-width:${({ theme }) => theme.tablet}) {
+      padding:${p => p.theme.space[1]}px;
+   }
 `
 
 export const UserInfo = styled.div`
@@ -48,6 +59,15 @@ export const UserInfo = styled.div`
    display: flex;
    align-items: center;
    gap:${p => p.theme.space[3]}px;
+   
+   @media ( max-width:${({ theme }) => theme.tabletBg}) {
+      flex-direction: column;
+      align-items: center;
+      padding: ${p => p.theme.space[4]}px ${p => p.theme.space[2]}px;
+      gap:${p => p.theme.space[2]}px;
+   }
+
+   
 `
 
 
@@ -60,7 +80,7 @@ export const Left = styled.div`
    flex-wrap: wrap;
 
    & svg{
-      color: ${p => p.theme.colors.greyDark};
+      color: ${p => p.theme.title};
    }
    & svg:hover {
       color: ${p => p.theme.colors.blue};
@@ -88,27 +108,28 @@ export const PinterestIcon = styled(Pinterest)`
    height: 40px;
 `
 
-
-
 export const Center = styled.div`
    flex: 1;
    display: flex;
    flex-direction: column;
-   gap: ${p => p.theme.space[2]}px;;
-`
+   gap: ${p => p.theme.space[2]}px;
+   
+
+   `
 export const Name = styled.h2`
    text-align: center;
    font-size: 30px;
-`
+   `
 export const InfoLink = styled.a`
    display: flex;
    align-items: center;
    gap: 2px;
    color: ${p => p.theme.title};
    text-decoration: none;
-
+   
    & svg{
       color: inherit;
+     
    }
 `
 

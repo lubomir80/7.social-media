@@ -26,6 +26,7 @@ export const lightTheme = {
    mobile: "480px",
    tablet: "768px",
    tabletBg: "960px",
+   laptopL: "1024px",
 
    fontSizes: [22, 32, 48, 64, 74, 96],
 
@@ -67,6 +68,7 @@ export const darkTheme = {
    mobile: "480px",
    tablet: "768px",
    tabletBg: "960px",
+   laptopL: "1024px",
 
 
    fontSizes: [22, 32, 48, 64, 74, 96],

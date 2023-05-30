@@ -11,6 +11,10 @@ export const PostBox = styled.div`
    background-color: ${p => p.theme.element};
    border-radius: ${p => p.theme.borderRadius[2]}px;
    box-shadow: ${p => p.theme.boxShadow};
+
+   @media ( max-width:${({ theme }) => theme.mobile}) {
+      padding: ${p => p.theme.space[1] * 1.5}px;
+   }
 `
 
 export const PostUser = styled.div`
@@ -29,7 +33,7 @@ export const PostUser = styled.div`
 export const PostContent = styled.div`
    display:flex;
    flex-direction: column;
-   gap : ${p => p.theme.space[3]}px;
+   gap : ${p => p.theme.space[2]}px;
 `
 export const PostContentText = styled.span`
    
@@ -47,21 +51,29 @@ export const PostInfo = styled.div`
    align-items: center;
    gap : ${p => p.theme.space[2]}px;
    margin-bottom: ${p => p.theme.space[2]}px;
+
+   @media ( max-width:${({ theme }) => theme.mobile}) {
+      gap : ${p => p.theme.space[1]}px;
+      align-items: center;
+   }
 `
 
 export const PostButton = styled.button`
-   cursor: pointer;
-   font-size: 20px;
-   border: none;
-   background: transparent;
-   color: ${p => p.theme.title};
-   gap: ${p => p.theme.space[1]}px;
+cursor: pointer;
+font-size: 16px;
+border: none;
+background: transparent;
+color: ${p => p.theme.title};
+gap: ${p => p.theme.space[1]}px;
+display: flex;
+align-items: center;
+
+& svg{
    display: flex;
-   align-items: center;
-   
-   & svg{
-      display: flex;
-      width: 24px;
-      height: 24px;
+   width: 20px;
+   height: 20px;
+}
+@media ( max-width:${({ theme }) => theme.mobile}) {
+      gap : ${p => p.theme.space[1] - 8}px;
    }
 `
